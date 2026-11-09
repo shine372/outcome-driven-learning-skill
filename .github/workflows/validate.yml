@@ -1,0 +1,27 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate and render the golden plan
+        run: |
+          python skills/outcome-driven-learning/scripts/render_plan.py \
+            skills/outcome-driven-learning/assets/figma-two-day-plan.json \
+            --output "$RUNNER_TEMP/figma-two-day-plan.md"
+          test -s "$RUNNER_TEMP/figma-two-day-plan.md"

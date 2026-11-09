@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "goal": "两天内用可展示作品倒逼学会 Figma 产品原型交付",
+  "audience_role": "产品助理",
+  "target_level": "L3",
+  "target_level_rationale": "产品助理需要能独立搭建中保真原型、表达交互规则并完成分享交付；L4 和 L5 的设计系统与视觉专家能力通常不是这个岗位的速通重点。",
+  "capability_ladder": [
+    {
+      "level": "L1",
+      "name": "查看与协作",
+      "standard": "能查看页面、图层和标注，理解 Frame、约束与组件，导出素材并参与评论。",
+      "use_case": "接收设计稿并与设计、研发沟通。",
+      "recommendation": "optional"
+    },
+    {
+      "level": "L2",
+      "name": "基础独立操作",
+      "standard": "能独立创建 Frame、文本、形状和基础组件，使用 Auto Layout 组织页面并完成简单连线。",
+      "use_case": "多数产品助理岗位的最低可上手要求。",
+      "recommendation": "minimum"
+    },
+    {
+      "level": "L3",
+      "name": "产品原型交付",
+      "standard": "能使用组件、变体、响应式布局、弹窗和页面跳转交付中保真原型，覆盖表单与异常状态，并完成分享或 Dev Mode 交接。",
+      "use_case": "足以写“熟练”，能支撑面试作品和日常产品原型沟通。",
+      "recommendation": "recommended"
+    },
+    {
+      "level": "L4",
+      "name": "设计系统",
+      "standard": "能治理复杂变量、主题模式、组件库和多条件交互插件，并维护团队规范。",
+      "use_case": "设计系统维护或设计平台岗位更适用，产品助理通常不需要速通。",
+      "recommendation": "not_needed"
+    },
+    {
+      "level": "L5",
+      "name": "设计专家",
+      "standard": "能建立完整设计系统、品牌视觉体系和复杂高保真交互动效。",
+      "use_case": "适合 UI/UX 设计师或设计负责人，不是本次两天目标的合理范围。",
+      "recommendation": "not_needed"
+    }
+  ],
+  "portfolio": {
+    "name": "小宇宙收听管理改版",
+    "scope": [
+      "6 个主要页面",
+      "3 个关键状态",
+      "主要任务链路可点击"
+    ],
+    "out_of_scope": [
+      "完整还原小宇宙品牌视觉",
+      "复杂动效参数",
+      "插件开发",
+      "完整商业产品所有页面"
+    ],
+    "final_demo": "完成发现、收听、播放器、播放列表和返回的完整演示。"
+  },
+  "budget": {
+    "total_minutes": 270,
+    "schedule": [
+      {
+        "day": "Day 1",
+        "available_minutes": 120
+      },
+      {
+        "day": "Day 2",
+        "available_minutes": 150
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "sequence": 1,
+      "day": "Day 1",
+      "stage": "warmup",
+      "task": "认识界面、Frame、基础元素和网格",
+      "estimated_minutes": 12,
+      "tutorial": {
+        "title": "Figma 新手教程 2025",
+        "url": "https://www.bilibili.com/video/BV1QzADeFEcF/",
+        "viewing_range": "00:00–11:41",
+        "duration_seconds": 701,
+        "verification": "verified"
+      },
+      "output": "建立 390×844 的收听页 Frame 骨架",
+      "acceptance": [
+        "Frame 尺寸正确",
+        "页面层级和基础网格清楚"
+      ],
+      "notes": "只建立共同语言，不继续看后面的组件和原型。",
+      "completed": false
+    },
+    {
+      "sequence": 2,
+      "day": "Day 1",
+      "stage": "main_project",
+      "task": "跟练完整项目 P1–P6：首页、节目卡、底栏和播放工具栏",
+      "estimated_minutes": 30,
+      "tutorial": {
+        "title": "Google Podcasts 完整项目",
+        "url": "https://www.bilibili.com/video/BV1vy4y1S78N/?p=1",
+        "viewing_range": "P1–P6",
+        "verification": "partially_verified"
+      },
+      "output": "完成首页与音频产品核心页面骨架",
+      "acceptance": [
+        "节目卡使用 Auto Layout",
+        "按钮和底栏已组件化",
+        "页面内容不重叠"
+      ],
+      "notes": "长项目是两天主线；遇到旧版操作时改用现代组件和 Auto Layout。",
+      "completed": false
+    },
+    {
+      "sequence": 3,
+      "day": "Day 1",
+      "stage": "just_in_time",
+      "task": "补齐 Auto Layout：处理节目卡和按钮自动布局",
+      "estimated_minutes": 7,
+      "tutorial": {
+        "title": "Auto Layout 其实很简单",
+        "url": "https://www.bilibili.com/video/BV1pYCUYoE6C/",
+        "viewing_range": "全长",
+        "duration_seconds": 419,
+        "verification": "verified"
+      },
+      "output": "节目卡在标题换行时自动撑高",
+      "acceptance": [
+        "标题换行时卡片自动撑高",
+        "文字与图标不重叠"
+      ],
+      "notes": "只在项目中出现布局问题时观看，不单独刷完。",
+      "completed": false
+    },
+    {
+      "sequence": 4,
+      "day": "Day 1",
+      "stage": "just_in_time",
+      "task": "补齐组件基础：节目卡、播放按钮和底部导航",
+      "estimated_minutes": 5,
+      "tutorial": {
+        "title": "Figma 组件全攻略（一）",
+        "url": "https://www.bilibili.com/video/BV146BWY7E5o/",
+        "viewing_range": "全长",
+        "duration_seconds": 313,
+        "verification": "verified"
+      },
+      "output": "完成节目卡、播放按钮和底部导航主组件",
+      "acceptance": [
+        "修改主组件后所有实例同步更新"
+      ],
+      "notes": "与下一行 Variants 同属连续组件课程。",
+      "completed": false
+    },
+    {
+      "sequence": 5,
+      "day": "Day 1",
+      "stage": "just_in_time",
+      "task": "补齐 Variants：未读、已读、更新中和播放中状态",
+      "estimated_minutes": 10,
+      "tutorial": {
+        "title": "组件属性使用详解",
+        "url": "https://www.bilibili.com/video/BV1MYkxYvE8s/",
+        "viewing_range": "00:00–09:31",
+        "duration_seconds": 884,
+        "verification": "verified"
+      },
+      "output": "创建至少三组可切换的组件状态",
+      "acceptance": [
+        "至少三组状态变体可在实例中切换",
+        "未读、已读和播放中状态表现清楚"
+      ],
+      "notes": "布尔和文本属性留到 Day 2 状态补强时再看。",
+      "completed": false
+    },
+    {
+      "sequence": 6,
+      "day": "Day 2",
+      "stage": "main_project",
+      "task": "跟练完整项目 P7–P15：次级页面和主要原型链路",
+      "estimated_minutes": 64,
+      "tutorial": {
+        "title": "Google Podcasts 完整项目 P7",
+        "url": "https://www.bilibili.com/video/BV1vy4y1S78N/?p=7",
+        "viewing_range": "P7–P15",
+        "verification": "partially_verified"
+      },
+      "output": "完成探索、订阅、个人中心、播放器和主要原型连线",
+      "acceptance": [
+        "主流程可点击",
+        "所有返回路径正确",
+        "作品保持中保真且有清楚层级"
+      ],
+      "notes": "中保真即可，不还原品牌、复杂渐变和装饰细节。",
+      "completed": false
+    },
+    {
+      "sequence": 7,
+      "day": "Day 2",
+      "stage": "just_in_time",
+      "task": "补齐弹窗与 Overlay 的打开、关闭和返回",
+      "estimated_minutes": 8,
+      "tutorial": {
+        "title": "Figma 弹窗动效",
+        "url": "https://www.bilibili.com/video/BV1ie4y1U76p/",
+        "viewing_range": "全长",
+        "duration_seconds": 484,
+        "verification": "verified"
+      },
+      "output": "为收藏面板、播放列表和个人中心添加弹窗",
+      "acceptance": [
+        "Overlay 能从正确来源打开",
+        "关闭后返回来源页面"
+      ],
+      "notes": "跳过复杂动效参数。",
+      "completed": false
+    },
+    {
+      "sequence": 8,
+      "day": "Day 2",
+      "stage": "just_in_time",
+      "task": "补齐 Tab 与组件布尔、文本属性",
+      "estimated_minutes": 16,
+      "tutorial": {
+        "title": "Figma 交互：Tab 栏切换",
+        "url": "https://www.bilibili.com/video/BV1hr4y1J7ct/",
+        "viewing_range": "全长 10:24；组件属性 09:31–14:44",
+        "duration_seconds": 937,
+        "verification": "partially_verified"
+      },
+      "output": "完成可切换 Tab 和可复用的节目卡状态",
+      "acceptance": [
+        "Tab 状态可切换",
+        "同一节目卡复用于多个列表"
+      ],
+      "notes": "不再重复学习基础页面跳转。",
+      "completed": false
+    },
+    {
+      "sequence": 9,
+      "day": "Day 2",
+      "stage": "just_in_time",
+      "task": "补齐评论与异常状态的产品规则表达",
+      "estimated_minutes": 2,
+      "tutorial": {
+        "title": "Figma 评论功能",
+        "url": "https://www.bilibili.com/video/BV1Q161BSEeR/",
+        "viewing_range": "全长",
+        "duration_seconds": 127,
+        "verification": "verified"
+      },
+      "output": "给全部已读、下载失败和跨端进度冲突添加规则注释",
+      "acceptance": [
+        "每条异常状态包含触发条件",
+        "每条异常状态包含系统反馈和下一步动作"
+      ],
+      "notes": "重点是产品规则表达，不再增加画图课程。",
+      "completed": false
+    },
+    {
+      "sequence": 10,
+      "day": "Day 2",
+      "stage": "delivery",
+      "task": "练习分享并检查开发交付信息",
+      "estimated_minutes": 6,
+      "tutorial": {
+        "title": "Figma 文件链接分享",
+        "url": "https://www.bilibili.com/video/BV1X161BSEsx/",
+        "viewing_range": "两段合计 06:18",
+        "duration_seconds": 378,
+        "verification": "partially_verified"
+      },
+      "output": "生成可分享原型链接和开发查看视图",
+      "acceptance": [
+        "外部链接可打开",
+        "能查看 Frame、间距、文字和颜色"
+      ],
+      "notes": "分享权限先保持限制访问。",
+      "completed": false
+    },
+    {
+      "sequence": 11,
+      "day": "Day 2",
+      "stage": "delivery",
+      "task": "完成主任务链演示自测和能力表述",
+      "estimated_minutes": 30,
+      "tutorial": {
+        "title": "—",
+        "url": "—",
+        "viewing_range": "—",
+        "verification": "unverified"
+      },
+      "output": "记录 5 分钟演示、关键截图和简历项目描述",
+      "acceptance": [
+        "发现、收听、播放器、播放列表和返回完整可演示",
+        "至少 8 个交互连接可点击",
+        "能力表述有作品证据支撑"
+      ],
+      "notes": "完整作品完成后才写“熟悉 Figma”，不要写“精通”。",
+      "completed": false
+    }
+  ],
+  "assumptions": [
+    "每天按计划投入约两小时，保留少量调整和排错时间。",
+    "作品目标是中保真产品原型，不追求品牌视觉完整还原。",
+    "教程核验状态以生成本示例时能确认的信息为准。"
+  ]
+}

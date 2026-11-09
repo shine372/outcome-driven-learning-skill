@@ -1,0 +1,6 @@
+interface:
+  display_name: "成果倒逼学习规划器"
+  short_description: "从可展示成果倒推能力等级、教程任务、验收标准与每日安排"
+  default_prompt: "使用 $outcome-driven-learning 帮我从可展示作品倒推一份可执行的学习路线。"
+policy:
+  allow_implicit_invocation: true

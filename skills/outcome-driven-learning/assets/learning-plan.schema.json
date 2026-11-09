@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/shine372/outcome-driven-learning-skill/main/skills/outcome-driven-learning/assets/learning-plan.schema.json",
+  "title": "Outcome-driven learning plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "goal",
+    "audience_role",
+    "target_level",
+    "target_level_rationale",
+    "capability_ladder",
+    "portfolio",
+    "budget",
+    "tasks",
+    "assumptions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audience_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_level": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_level_rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capability_ladder": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "level",
+          "name",
+          "standard",
+          "use_case",
+          "recommendation"
+        ],
+        "properties": {
+          "level": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "standard": {
+            "type": "string",
+            "minLength": 1
+          },
+          "use_case": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recommendation": {
+            "enum": [
+              "minimum",
+              "recommended",
+              "optional",
+              "not_needed",
+              "none"
+            ]
+          }
+        }
+      }
+    },
+    "portfolio": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "scope",
+        "out_of_scope",
+        "final_demo"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "out_of_scope": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "final_demo": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_minutes",
+        "schedule"
+      ],
+      "properties": {
+        "total_minutes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schedule": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "day",
+              "available_minutes"
+            ],
+            "properties": {
+              "day": {
+                "type": "string",
+                "minLength": 1
+              },
+              "available_minutes": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sequence",
+          "day",
+          "stage",
+          "task",
+          "estimated_minutes",
+          "tutorial",
+          "output",
+          "acceptance",
+          "notes",
+          "completed"
+        ],
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "day": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stage": {
+            "enum": [
+              "warmup",
+              "main_project",
+              "just_in_time",
+              "delivery"
+            ]
+          },
+          "task": {
+            "type": "string",
+            "minLength": 1
+          },
+          "estimated_minutes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "tutorial": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "url",
+              "viewing_range",
+              "verification"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "viewing_range": {
+                "type": "string"
+              },
+              "duration_seconds": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "verification": {
+                "enum": [
+                  "verified",
+                  "partially_verified",
+                  "unverified"
+                ]
+              }
+            }
+          },
+          "output": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptance": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "notes": {
+            "type": "string"
+          },
+          "completed": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
